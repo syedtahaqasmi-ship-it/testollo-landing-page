@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Testollo Assessment Engine | Secure Login</title>
+    
+    <!-- Favicon (Google Drive Direct Link Bypass) -->
+    <link rel="icon" href="https://lh3.googleusercontent.com/d/1700zMrbAIuFnORO81JvHNVGoLdmmPeKW" type="image/png">
+    
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #164e8a; 
+            --cyan-light: #00b4d8; 
+            --white: #ffffff;
+            --text-dark: #333333;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            /* Educational Dotted Background */
+            background-image: radial-gradient(var(--cyan-light) 0.5px, transparent 0.5px), radial-gradient(var(--cyan-light) 0.5px, var(--bg-light) 0.5px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            background-attachment: fixed;
+            opacity: 0.95;
+            color: var(--text-dark);
+        }
+
+        /* Top Navigation / Back Button */
+        .navbar {
+            padding: 15px 30px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .back-btn {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            color: var(--cyan-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .logo-container img {
+            max-width: 250px;
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+        }
+
+        /* Action Button (Redirects to Apps Script) */
+        .login-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--cyan-light) 100%);
+            color: var(--white);
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0, 180, 216, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .login-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 180, 216, 0.6);
+        }
+
+        /* Features Section */
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--cyan-light);
+            transition: 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 4px solid var(--primary-blue);
+        }
+        .feature-icon {
+            font-size: 35px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <div class="navbar">
+        <a href="#" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Main Website</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="logo-container">
+            <!-- Main Logo (Google Drive Direct Link Bypass) -->
+            <img src="https://lh3.googleusercontent.com/d/1700zMrbAIuFnORO81JvHNVGoLdmmPeKW" alt="Testollo Assessment Engine">
+        </div>
+        <h1>Testollo Assessment Engine</h1>
+        <p class="subtitle">Where cutting-edge technology meets transparent analysis. Elevate your examinations to the next level.</p>
+        
+        <!-- Secure Sign In (Links to your Google Apps Script) -->
+        <a href="https://script.google.com/a/macros/rahmanimission.org/s/AKfycbx2hk2LWlPny80nNg36R6AEpbLVCwgUEc7UZVBmn_kGL92aPe_-k0ulNpj8ByGS5U34/exec" class="login-btn">
+            <i class="fas fa-lock"></i> Secure Sign In
+        </a>
+    </div>
+
+    <!-- Powerful Features Section -->
+    <div class="features-container">
+        
+        <!-- Feature 1 -->
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+            <div class="feature-title">Lightning Fast Setup</div>
+            <div class="feature-desc">Experience a seamless, high-speed interface to launch and manage your tests in a matter of seconds.</div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="feature-title">Anti-Cheating Protection</div>
+            <div class="feature-desc">Equipped with advanced response locking and strict security measures to prevent malpractices.</div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="feature-title">Live Leaderboards</div>
+            <div class="feature-desc">Instant automated grading system providing real-time ranking and performance metrics.</div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+            <div class="feature-title">AI Powered Analysis</div>
+            <div class="feature-desc">Deep topic-wise insights and AI-driven recommendations to identify core strengths and weaknesses.</div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Testollo Assessment Engine. All rights reserved.
+    </footer>
+
+</body>
+</html>
