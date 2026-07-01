@@ -75,56 +75,65 @@
             background-color: var(--white);
         }
         
-       /* New Heading Styles */
-        /* New Heading Styles (Gap & Font Fixes) */
+       /* New Heading Styles (Fixed Spacing & White Shadow) */
         .main-heading {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             margin-bottom: 10px;
-            line-height: 1; /* لائن کی اونچائی کو بالکل کم کر دیا ہے */
+            line-height: 1.1; 
         }
 
         .brand-name {
             font-family: 'Montserrat', 'Archivo Black', 'Poppins', sans-serif;
             font-size: 4.5rem;
-            font-weight: 900; /* فل بولڈ */
+            font-weight: 900; 
             letter-spacing: -1px;
             background: linear-gradient(90deg, #00b4d8 0%, #164e8a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 1.5px #ffffff;
-            filter: drop-shadow(0px 6px 8px rgba(0,0,0,0.15));
+            /* آؤٹ لائن (-webkit-text-stroke) مکمل ہٹا دی گئی ہے */
+            /* اس کی جگہ ڈراپ شیڈو کا کمال استعمال کیا گیا ہے جو پیچھے ایک سفید بارڈر بنائے گا */
+            filter: drop-shadow(1.5px 1.5px 0px #ffffff) drop-shadow(-1.5px -1.5px 0px #ffffff) drop-shadow(0px 8px 10px rgba(0,0,0,0.15));
             display: block;
-            margin-bottom: -8px; /* 🌟 یہ مائنس مارجن Testollo کو نیچے والی لائن کے قریب کر دے گا */
+            margin-bottom: 2px; /* مائنس ہٹا کر تھوڑا سا مثبت فاصلہ دے دیا گیا ہے */
         }
 
         .brand-sub {
             display: block;
             font-family: 'Montserrat', 'Archivo Black', 'Poppins', sans-serif;
             font-size: 1.6rem;
-            font-weight: 900; /* فل بولڈ */
-            color: #1e3a8a; /* گہرا نیلا رنگ (آپ کی تصویر کے مطابق) */
+            font-weight: 900; 
+            color: #1e3a8a; 
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            -webkit-text-stroke: 0.5px #ffffff;
-            text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.9);
-            margin-top: 0; 
+            margin-top: 5px; /* فاصلہ تھوڑا بڑھا دیا گیا ہے */
+            /* آؤٹ لائن ہٹا کر اس کی جگہ چاروں طرف سفید شیڈو (Text Shadow) لگایا گیا ہے */
+            text-shadow: 
+                1.5px 1.5px 0px #fff, 
+               -1.5px -1.5px 0px #fff, 
+                1.5px -1.5px 0px #fff, 
+               -1.5px 1.5px 0px #fff, 
+                0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .brand-name { 
                 font-size: 3.2rem; 
-                -webkit-text-stroke: 1px #ffffff; 
-                margin-bottom: -5px; /* موبائل پر فاصلہ کنٹرول کرنے کے لیے */
+                margin-bottom: 2px; /* موبائل پر مناسب فاصلہ */
             }
             .brand-sub { 
                 font-size: 1.15rem; 
-                font-weight: 900; /* 🌟 موبائل پر بھی فل بولڈ رہے گا */
+                font-weight: 900; 
                 letter-spacing: 0.1em; 
-                -webkit-text-stroke: 0.3px #ffffff;
+                text-shadow: 
+                    1px 1px 0px #fff, 
+                   -1px -1px 0px #fff, 
+                    1px -1px 0px #fff, 
+                   -1px 1px 0px #fff, 
+                    0px 3px 5px rgba(0, 0, 0, 0.1);
             }
         }
         p.subtitle {
